@@ -103,7 +103,7 @@ int main()
         const char* Height = "height:";
         const char* Pivot = "pivot:";
 
-        while (std::getline(RealStr_, Token_))
+        while (std::getline(RealStr_, Token_, '\n'))
         {
             InputFile_ >> Token_;
             std::cout << Token_ << std::endl;
