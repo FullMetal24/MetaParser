@@ -158,19 +158,45 @@ int main()
 
         for (size_t i = 0; i < VectorName_.size(); i++)
         {
-            OutFile_ << VectorName_[i] << std::endl;
-            OutFile_ << VectorX_[i] << std::endl;
-            OutFile_ << VectorY_[i] << std::endl;
-            OutFile_ << VecHeight_[i] << std::endl;
-            OutFile_ << VecWidth_[i] << std::endl;
-            OutFile_ << VecPivot_[i] << std::endl;
+            if (0 != VectorName_.size())
+            {
+                OutFile_ << VectorName_[i] << std::endl;
+            }
+
+            if (0 != VectorX_.size())
+            {
+                OutFile_ << VectorX_[i] << std::endl;
+            }
+
+            if (0 != VectorY_.size())
+            {
+                OutFile_ << VectorY_[i] << std::endl;
+            }
+
+            if (0 != VecHeight_.size())
+            {
+                OutFile_ << VecHeight_[i] << std::endl;
+            }
+
+            if (0 != VecWidth_.size())
+            {
+                OutFile_ << VecWidth_[i] << std::endl;
+            }
+
+            if (0 != VecPivot_.size())
+            {
+                OutFile_ << VecPivot_[i] << std::endl;
+            }
         }
 
         OutFile_ << std::endl;
 
         for (size_t i = 0; i < Animations_.size(); i++)
         {
-            OutFile_ << Animations_[i].Name_ << std::endl;
+            if (0 != Animations_.size())
+            {
+                OutFile_ << Animations_[i].Name_ << std::endl;
+            }
         }
 
         ++DirIter;
